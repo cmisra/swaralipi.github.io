@@ -157,7 +157,7 @@
 	<!-- THE RAAG ELEMENT -->
 	<xsd:complexType name="RaagType">
 		<xsd:sequence>
-			<xsd:element name="RAAG_NAME" type="xsd:string" />
+			<xsd:element name="RAAG_NAME" type="RaagNameType" />
 			<xsd:element name="THAAT" type="xsd:string" />
 			<xsd:element name="AROHANA" type="xsd:string" />
 			<xsd:element name="AVAROHANA" type="xsd:string" />
@@ -167,6 +167,25 @@
 			<xsd:element name="PAKAD" type="xsd:string" />			
 		</xsd:sequence>
 	</xsd:complexType>
+	
+	<!-- THE RAAG NAME MUST BE ONE OF THE FOLLOWING LIST OF CHOICES (INCOMPLETE) -->
+	<xsd:simpleType name="RaagNameType">
+		<xsd:restriction base="xsd:string">
+			<xs:enumeration value="Aarabhi" />									
+			<xs:enumeration value="Abheri" />
+			<xs:enumeration value="Abhogi" />
+			<xs:enumeration value="Adana" />
+			<xs:enumeration value="Ahir Lalit" />
+			<xs:enumeration value="Ahiri" />
+			<xs:enumeration value="Amrit Varshini" />
+			<xs:enumeration value="Anand Leela" />
+			<xs:enumeration value="Araj" />
+			<xs:enumeration value="Asa" />
+			<xs:enumeration value="Asavari" />
+			<xs:enumeration value="Sindhura Asabhari" />
+			<xs:enumeration value="Bageshree" />
+		</xsd:restriction>
+	</xsd:simpleType>
 
 	<!-- THE SHEET ELEMENT -->
 	<xsd:complexType name="SheetType">
